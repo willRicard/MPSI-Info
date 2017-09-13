@@ -15,6 +15,7 @@ def is_prime(n, primes=None):
                 return False
             elif n > sqrt(n):
                 return True
+        return n != 1
 
 
 def next_prime(n, primes=None):
