@@ -1,8 +1,12 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+""" Calculs sur les nombres premiers """
+
 from math import sqrt
 
 
 def is_prime(n, primes=None):
+    """ Renvoie True si n est un nombre premier """
     if primes is not None:
         for p in primes:
             if n % p == 0:
@@ -19,6 +23,7 @@ def is_prime(n, primes=None):
 
 
 def next_prime(n, primes=None):
+    """ Calcule le prochain nombre premier """
     m = n + 1
     while not is_prime(m, primes):
         m = m + 1
