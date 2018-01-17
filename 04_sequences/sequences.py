@@ -7,7 +7,7 @@ from math import sqrt
 
 
 def max_liste(liste):
-    """max_liste renvoie un tuple contenant le plus grand Ã©lÃ©ment d'une liste et son index."""
+    """max_liste renvoie un tuple contenant le plus grand élément d'une liste et son index."""
     maximum = 0
     indice = 0
     for i, element in enumerate(liste):
@@ -40,7 +40,7 @@ def ecart_type(liste):
 
 
 def stat_liste(liste):
-    """stat_liste renvoie un tuple contenant la moyenne et l'Ã©cart-type des nombres d'une liste."""
+    """stat_liste renvoie un tuple contenant la moyenne et l'écart-type des nombres d'une liste."""
     return moyenne(liste), ecart_type(liste)
 
 
