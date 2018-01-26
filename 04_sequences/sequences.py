@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-""" Travaux Pratiques d'Informatique : SÃ©quences """
+""" Travaux Pratiques d'Informatique : Sequences """
 
 from random import randint
 from math import sqrt
 
 
 def max_liste(liste):
-    """max_liste renvoie un tuple contenant le plus grand élément d'une liste et son index."""
+    """ max_liste renvoie un tuple contenant le plus grand element d'une liste et son index. """
     maximum = 0
     indice = 0
     for i, element in enumerate(liste):
@@ -18,7 +18,7 @@ def max_liste(liste):
 
 
 def liste_hasard(longueur, borne_sup):
-    """ renvoie une liste de nombres alÃ©atoires """
+    """ renvoie une liste de nombres aleatoires """
     liste = [0] * longueur
     for i in range(longueur):
         liste[i] = randint(0, borne_sup)
@@ -31,7 +31,7 @@ def moyenne(liste):
 
 
 def ecart_type(liste):
-    """ecart_type renvoie l'Ã©cart-type des nombres d'une liste."""
+    """ ecart_type renvoie l'ecart-type des nombres d'une liste."""
     somme = 0
     moyenne_liste = moyenne(liste)
     for element in liste:
@@ -40,11 +40,12 @@ def ecart_type(liste):
 
 
 def stat_liste(liste):
-    """stat_liste renvoie un tuple contenant la moyenne et l'écart-type des nombres d'une liste."""
+    """ stat_liste renvoie un tuple contenant la moyenne et
+        l'ecart-type des nombres d'une liste. """
     return moyenne(liste), ecart_type(liste)
 
 
 if __name__ == "__main__":
     liste_test = liste_hasard(100, 20)
     print(liste_test)
-    print("Moyenne: %f\nÃ‰cart-type: %f" % stat_liste(liste_test))
+    print("Moyenne: %f\nEcart-type: %f" % stat_liste(liste_test))
