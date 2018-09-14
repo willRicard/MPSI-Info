@@ -85,8 +85,6 @@ def trace_interpolation(x, y):
     plt.scatter(x, y)
     plt.plot(x_spline, y_spline)
 
-    plt.show()
-
 
 def main():
     """ Point d'entrée du programme. """
@@ -94,17 +92,25 @@ def main():
     x_sin = np.linspace(-np.pi, np.pi, 10)
     y_sin = np.sin(x_sin)
 
+    plt.subplot(131)
+    plt.title("sin(x)")
     trace_interpolation(x_sin, y_sin)
 
     x_test = np.array([1, 2, 3, 4, 5])
     y_test = np.array([5, 7, 3, 4, 2])
 
+    plt.subplot(132)
+    plt.title("test")
     trace_interpolation(x_test, y_test)
 
     x_aleatoire = np.linspace(0, 10, 20)
     y_aleatoire = np.random.uniform(size=len(x_aleatoire))
 
+    plt.subplot(133)
+    plt.title("Points Aléatoires")
     trace_interpolation(x_aleatoire, y_aleatoire)
+
+    plt.show()
 
 
 if __name__ == "__main__":
